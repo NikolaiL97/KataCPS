@@ -46,22 +46,40 @@ ul {
  }
 
 .header {
+    border-bottom: 1px solid #D9FFF5;
+    background-color: #fff;
+}
+.header__body {
     display: flex;
     justify-content: space-between;
     width: 100%;
     align-items: center;
     height: 87px;
-    border-bottom: 1px solid #D9FFF5;
-    background-color: #fff;
 }
 
 .header-items1 {
     display: flex;
     justify-content: center;
-    gap: 8px;
-    margin-left: 16px;
-    max-height: 87px;
     align-items: center;
+}
+
+.header__items1 {
+    margin-left: 16px;
+    gap: 8px;
+    max-height: 87px;
+}
+
+.header-items2 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header__items2 {
+    gap: 16px;
+    margin-right: 16px;
+    height: 88px;
+    margin-left: -30px;
 }
 
 .header-items2__border {
@@ -69,18 +87,6 @@ ul {
     border: 1px  solid #EAEAEA;
     right: 131px; 
 }
-
-
-.header-items2 {
-    display: flex;
-    justify-content: flex-end;
-    gap: 16px;
-    margin-right: 16px;
-    height: 88px;
-    align-items: center;
-    margin-left: -30px;
-}
-
 
  .header-items2__phone,
  .header-items2__message,
@@ -100,6 +106,9 @@ ul {
 
 .title1 {
     display: flex;
+}
+
+.title__first {
     margin: 0 0 24px;
     height: 40px;
     width: 100%;
@@ -166,7 +175,7 @@ ul {
 .menu__elements:last-child{
     margin-right: 16px;
 }
-a.menu__elements {
+.menu__elements--desktop {
     display: none;
 }
 .menu__link {
@@ -207,8 +216,11 @@ a.menu__elements {
 .expand {
     display: flex;
     justify-content: flex-start;
-    margin: 0 0 0 0;
     align-content: flex-start;
+}
+
+.menu__expand {
+    margin: 0;
 }
 .expand__icon {
     margin-right: 8px;
@@ -228,7 +240,7 @@ a.menu__elements {
     padding: 15.57px 0 27px 0;
 }
 @media (min-width: 768px) {
-    .header-items1 {
+    .header__items1 {
         gap: 20px;
         margin-left: 24px;
     }
@@ -238,21 +250,24 @@ a.menu__elements {
         left: 84px; 
     }
 
+    .header__items2 {
+        margin-right: 24px;
+    }
+
     .header-items2__phone,
     .header-items2__message,
     .header-items2__profile {
         display:contents;
     }
 
-    .header-items2 {
-        margin-right: 24px;
+    .title__first {
+        margin-bottom: 32px;
     }
+
     .title1__text {
         margin-left: 20px;
     }
-    .title1 {
-        margin-bottom: 32px;
-    }
+    
     .menu__box-shadow {
         top: 184px;
     }
@@ -314,12 +329,15 @@ a.menu__elements {
         margin: 42px 0 8.37px 0;
         height: 40px;
     }
-    .title1 {
+    .title__first {
         gap: 30px;
     }
     .title2 {
         display: flex;
         align-content: center;
+    }
+
+    .title__second {
         gap: 32px;
         margin-right: 32px;
     }
@@ -371,7 +389,7 @@ a.menu__elements {
     .menu__elements:last-child{
         display: none;
     }
-    a.menu__elements {
+    .menu__elements--desktop {
         display: inline;
         color: #7E7E82;
         font-size: 16px;
